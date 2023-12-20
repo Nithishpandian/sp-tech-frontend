@@ -32,7 +32,7 @@ const HeroSection = () => {
           animate="animate"
           className=" text-stone-600"
         >
-          where innovation meets precision in wiring solutions. With a
+          Where innovation meets precision in wiring solutions. With a
           commitment to excellence, we specialize in crafting reliable and
           tailored wiring harnesses for diverse applications
         </motion.p>
@@ -82,10 +82,10 @@ const HeroSection = () => {
             variants={animationVariantHeroImg}
             initial="initial"
             animate="animate"
-            className=" h-fit w-fit"
+            className=" h-fit overflow-hidden w-96 rounded-lg"
           >
             <img
-              className=" w-80 h-36 rounded-lg shadow hover:grayscale overflow-hidden hover:blur-[0.6px] duration-500 cursor-pointer"
+              className=" w-96 h-36 rounded-lg shadow hover:scale-110 duration-500 object-cover cursor-pointer"
               src={working}
               alt=""
             />
@@ -105,7 +105,7 @@ const HeroSection = () => {
             animate="animate"
             className=" text-stone-600"
           >
-            we weave reliability into every wire. Explore our range of
+            We weave reliability into every wire. Explore our range of
             precision-crafted wiring harness solutions, designed to fuel
             innovation and elevate your projects. Trust us for seamless
             connectivity that goes beyond expectations.
