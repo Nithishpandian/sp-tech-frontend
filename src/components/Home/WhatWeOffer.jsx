@@ -3,7 +3,7 @@ import DecorationHome from "./DecorationHome";
 
 const WhatWeOffer = () => {
   return (
-    <div className=" grid grid-cols-5 gap-24 justify-between bg-[#2B2C32] py-28 pl-52 pr-56">
+    <div className=" grid grid-cols-5 gap-24 justify-between bg-gray py-28 pl-52 pr-56">
       <div className=" col-span-2 grid grid-rows-2">
         <h1 className=" text-stone-200 text-5xl font-krona-one font-semibold">
           WHAT WE OFFER

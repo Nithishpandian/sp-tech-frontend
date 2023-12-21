@@ -16,7 +16,7 @@ const AboutUsInfo = () => {
           />
         </div>
         <div className=" p-10 flex flex-col gap-10">
-          <h1 className=" text-[#2B2C32] text-5xl font-krona-one font-bold">
+          <h1 className=" text-gray text-5xl font-krona-one font-bold">
             About Us
           </h1>
           <div className=" flex flex-col gap-3 text-stone-700 text-sm font-light">
@@ -45,11 +45,11 @@ const AboutUsInfo = () => {
             </p>
           </div>
           <div className=" h-full w-full flex justify-end items-end">
-            <div className=" h-fit py-2 px-14 bg-[#2B2C32] rounded-sm"></div>
+            <div className=" h-fit py-2 px-14 bg-gray rounded-sm"></div>
           </div>
         </div>
       </div>
-      <div className=" grid grid-cols-2 gap-36 justify-between bg-[#2B2C32] py-28 px-48">
+      <div className=" grid grid-cols-2 gap-36 justify-between bg-gray py-28 px-48">
         <div className=" flex flex-col gap-12">
           <h1 className=" text-stone-200 text-5xl font-krona-one font-bold">
             OUR MISSION

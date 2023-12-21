@@ -14,7 +14,8 @@ export default {
         "dm-sans": ["DM Sans", "sans-serif"],
       },
       colors:{
-        "black":"#121212"
+        "black":"#121212",
+        "gray":"#2B2C32"
       }
     },
   },
