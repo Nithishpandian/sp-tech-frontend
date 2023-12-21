@@ -22,7 +22,7 @@ const HeroSection = () => {
           variants={animationVariantHeroHeading}
           initial="initial"
           animate="animate"
-          className=" text-stone-800 font-extrabold text-6xl font-noto-sans"
+          className=" text-stone-800 font-extrabold text-5xl font-krona-one"
         >
           Precision Wiring Harness Solutions for Innovations.
         </motion.h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           variants={animationVariantHeroPara}
           initial="initial"
           animate="animate"
-          className=" text-stone-600"
+          className=" text-stone-600 font-noto-sans "
         >
           Where innovation meets precision in wiring solutions. With a
           commitment to excellence, we specialize in crafting reliable and
@@ -67,7 +67,7 @@ const HeroSection = () => {
             animate="animate"
             className=" flex justify-start gap-2"
           >
-            <button className=" z-10 relative bg-gray-100 text-stone-700 font-medium rounded-md text-sm p-4 border border-gray-400 hover:shadow-lg duration-300 cursor-pointer">
+            <button className=" z-10 relative bg-gray-100 text-stone-700 font-medium font-jost rounded-md text-sm p-4 border border-gray-400 hover:shadow-lg duration-300 cursor-pointer">
               Discover the art of seamless connectivity at SP Tech. We
               specialize in precision-engineered wiring harness solutions, where
               quality meets innovation. Elevate your projects with our
@@ -103,7 +103,7 @@ const HeroSection = () => {
             variants={animationVariantHeroTagPara}
             initial="initial"
             animate="animate"
-            className=" text-stone-600"
+            className=" text-stone-600 font-noto-sans"
           >
             We weave reliability into every wire. Explore our range of
             precision-crafted wiring harness solutions, designed to fuel

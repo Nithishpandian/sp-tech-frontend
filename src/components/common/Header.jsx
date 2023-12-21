@@ -17,8 +17,8 @@ const Header = () => {
       <div className=" flex items-center justify-center gap-8 text-stone-600 font-dm-sans text-lg">
         <a className=" hover:text-stone-400 duration-300" href="/">Home</a>
         <a className=" hover:text-stone-400 duration-300" href="/about-us">About us</a>
-        <a className=" hover:text-stone-400 duration-300" href="#">Products</a>
-        <a className=" hover:text-stone-400 duration-300" href="#">Contact</a>
+        <a className=" hover:text-stone-400 duration-300" href="/products">Products</a>
+        <a className=" hover:text-stone-400 duration-300" href="contact">Contact</a>
       </div>
     </motion.div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import aboutImg from "../../assets/images/about-us.avif";
 import decorationImg from "../../assets/icons/decoration.svg";
-import decorationWhiteImg from "../../assets/icons/decoration-white.svg";
+import DecorationAboutUs from "./DecorationAboutUs";
 
 const AboutUsInfo = () => {
   return (
@@ -54,31 +54,25 @@ const AboutUsInfo = () => {
           <h1 className=" text-stone-200 text-5xl font-krona-one font-bold">
             OUR MISSION
           </h1>
-          <div className=" flex items-center gap-5">
-            <img src={decorationWhiteImg} alt="" />
-            <p className="text-stone-300 font-noto-sans text-sm font-light">
-              We're on a mission to change the way the housing market works.
-              Rather than offering one service or another, we want to combine as
-              many and make our clients' lives easy and carefree. Our goal is to
-              match our clients with the perfect properties that fit their
-              tastes, needs, and budgets.
-            </p>
-          </div>
+          <DecorationAboutUs
+            content={`We're on a mission to change the way the housing market works. Rather
+            than offering one service or another, we want to combine as many and
+            make our clients' lives easy and carefree. Our goal is to match our
+            clients with the perfect properties that fit their tastes, needs, and
+            budgets.`}
+          />
         </div>
         <div className=" flex flex-col gap-12">
           <h1 className=" text-stone-200 text-5xl font-krona-one font-bold">
             OUR VISION
           </h1>
-          <div className=" flex items-center gap-5">
-            <img src={decorationWhiteImg} alt="" />
-            <p className="text-stone-300 font-noto-sans text-sm font-light">
-              We're on a mission to change the way the housing market works.
-              Rather than offering one service or another, we want to combine as
-              many and make our clients' lives easy and carefree. Our goal is to
-              match our clients with the perfect properties that fit their
-              tastes, needs, and budgets.
-            </p>
-          </div>
+          <DecorationAboutUs
+            content={`We're on a mission to change the way the housing market works. Rather
+            than offering one service or another, we want to combine as many and
+            make our clients' lives easy and carefree. Our goal is to match our
+            clients with the perfect properties that fit their tastes, needs, and
+            budgets.`}
+          />
         </div>
       </div>
     </div>

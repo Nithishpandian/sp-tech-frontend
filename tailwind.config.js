@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily:{
         "krona-one": ["Krona One", "sans-serif"],
+        "jost": ["Jost", "sans-serif"],
         "roboto": ["Roboto", "sans-serif"],
         "noto-sans": ["Noto Sans", "sans-serif"],
         "dm-sans": ["DM Sans", "sans-serif"],
