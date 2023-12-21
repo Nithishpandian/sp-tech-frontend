@@ -7,9 +7,10 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        "design-system": ["Design System C W01 900R", "sans-serif"],
+        "krona-one": ["Krona One", "sans-serif"],
         "roboto": ["Roboto", "sans-serif"],
         "noto-sans": ["Noto Sans", "sans-serif"],
+        "dm-sans": ["DM Sans", "sans-serif"],
       },
       colors:{
         "black":"#121212"

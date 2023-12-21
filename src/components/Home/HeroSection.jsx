@@ -17,12 +17,12 @@ import {
 const HeroSection = () => {
   return (
     <div className="grid grid-cols-3 justify-center py-14 px-20">
-      <div className=" flex flex-col gap-7">
+      <div className=" flex flex-col gap-7 mt-10">
         <motion.h1
           variants={animationVariantHeroHeading}
           initial="initial"
           animate="animate"
-          className=" text-stone-800 font-extrabold text-6xl font-roboto"
+          className=" text-stone-800 font-extrabold text-6xl font-noto-sans"
         >
           Precision Wiring Harness Solutions for Innovations.
         </motion.h1>
@@ -41,7 +41,7 @@ const HeroSection = () => {
           initial="initial"
           animate="animate"
         >
-          <button className="group/button overflow-hidden relative border border-[#202020] rounded-md  bg-black py-2 px-4 text-white font-semibold">
+          <button className="group/button overflow-hidden relative border border-[#202020] rounded-md  bg-black py-2 px-4 text-white font-semibold font-noto-sans">
             <div className="duration-300 group-hover/button:-translate-y-8 ">
               Contact
             </div>

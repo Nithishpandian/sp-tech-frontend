@@ -1,8 +1,12 @@
 /* Fonts */
-@import url("https://db.onlinewebfonts.com/c/8f3caf92047d515ae7230350d0e5f104?family=Design+System+C+W01+900R");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Krona+One&family=Noto+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
 
 /* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Styling */
+body{
+    background-color: #eeeeee;
+}

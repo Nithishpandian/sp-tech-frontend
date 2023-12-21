@@ -6,9 +6,9 @@ import { LuLinkedin } from "react-icons/lu";
 const Footer = () => {
   return (
     <>
-      <div className=" grid grid-cols-3 gap-8 bg-black py-8 px-12 font-noto-sans">
+      <div className=" grid grid-cols-3 gap-10 bg-black py-12 px-16 font-noto-sans">
         <div className=" flex flex-col gap-1">
-          <h1 className=" text-2xl font-design-system font-bold text-stone-200">
+          <h1 className=" text-2xl font-krona-one font-bold text-stone-300">
             SP TECH
           </h1>
           <p className=" text-stone-400">
@@ -28,25 +28,18 @@ const Footer = () => {
           </div>
         </div>
         <div className=" flex flex-col gap-3">
-          <div className=" flex flex-col gap-1">
-            <h2 className=" font-roboto font-medium text-stone-600 text-lg">
-              Email
+          <div className=" flex flex-col gap-3">
+            <h2 className=" font-roboto font-medium text-stone-600 text-xl">
+              Contact
             </h2>
-            <div>
-              <p className=" text-stone-400">sptech.cbe@gmail.com</p>
-            </div>
-          </div>
-          <div className=" flex flex-col gap-1">
-            <h2 className=" font-roboto font-medium text-stone-600 text-lg">
-              Mobile
-            </h2>
-            <div>
+            <div className=" flex flex-col gap-1">
               <p className=" text-stone-400">+91 8189894433</p>
+              <p className=" text-stone-400">sptech.cbe@gmail.com</p>
             </div>
           </div>
         </div>
         <div className=" flex flex-col gap-3">
-          <h2 className=" font-roboto font-medium text-stone-600 text-lg">
+          <h2 className=" font-roboto font-medium text-stone-600 text-xl">
             Links
           </h2>
           <div className=" flex flex-col gap-1 text-stone-400">

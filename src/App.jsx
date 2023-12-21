@@ -1,16 +1,17 @@
-import Footer from "./components/common/Footer"
-import Header from "./components/common/Header"
+import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home/Home"
+import AboutUs from "./pages/about-us/AboutUs"
 
 
 function App() {
 
   return (
-    <div className=" bg-[#f8f8f8]">
-      <Header />
-      <Home />
-      <Footer />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+      </Routes>
+    </>
   )
 }
 
