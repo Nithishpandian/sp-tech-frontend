@@ -1,7 +1,7 @@
 import React from "react";
 import { MdElectricBolt } from "react-icons/md";
-import wireImg from "../../assets/images/wire.png";
-import working from "../../assets/images/working.jpeg";
+import wireImg from "../../assets/images/common/wire.png";
+import working from "../../assets/images/common/working.jpeg";
 import { motion } from "framer-motion";
 import {
   animationVariantHeroHeading,

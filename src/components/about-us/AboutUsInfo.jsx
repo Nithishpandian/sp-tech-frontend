@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../../assets/images/about-us.avif";
+import aboutImg from "../../assets/images/about-us/about-us.avif";
 import decorationImg from "../../assets/icons/decoration.svg";
 import DecorationAboutUs from "./DecorationAboutUs";
 

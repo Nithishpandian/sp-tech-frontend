@@ -1,5 +1,5 @@
 import React from "react";
-import bulbImg from "../../assets/images/ceramic-bulb-holder.jpeg";
+import bulbImg from "../../assets/images/products/ceramic-bulb-holder.jpeg";
 
 const ProductCard = () => {
   return (
