@@ -16,6 +16,9 @@ const FeaturedProducts = () => {
         <ProductsHome image={productImg} name={"Ceramic bulb"} />
         <ProductsHome image={productImg} name={"Ceramic bulb"} />
         <ProductsHome image={productImg} name={"Ceramic bulb"} />
+        <ProductsHome image={productImg} name={"Ceramic bulb"} />
+        <ProductsHome image={productImg} name={"Ceramic bulb"} />
+        <ProductsHome image={productImg} name={"Ceramic bulb"} />
       </div>
     </div>
   );

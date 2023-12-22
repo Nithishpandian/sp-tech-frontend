@@ -22,7 +22,7 @@ const HeroSection = () => {
           variants={animationVariantHeroHeading}
           initial="initial"
           animate="animate"
-          className=" text-stone-800 font-extrabold text-5xl font-krona-one"
+          className=" text-stone-800 font-extrabold text-5xl leading-tight font-krona-one"
         >
           Precision Wiring Harness Solutions for Innovations.
         </motion.h1>
