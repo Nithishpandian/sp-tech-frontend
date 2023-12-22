@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactMessage = () => {
   return (
-    <div className="grid grid-cols-2 gap-20 bg-[#D9DFE5] py-20 px-64 ">
+    <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-20 bg-[#D9DFE5] py-14 sm:py-20 px-8 min-[450px]:px-20 sm:px-24 md:px-44 lg:px-36 xl:px-52 2xl:px-64 ">
       <div className=" flex flex-col gap-3 pr-12 pb-1">
         <h1 className=" font-krona-one text-4xl text-gray">
           SEND US A MESSAGE
