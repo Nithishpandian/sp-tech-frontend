@@ -12,6 +12,7 @@ export default {
         "roboto": ["Roboto", "sans-serif"],
         "noto-sans": ["Noto Sans", "sans-serif"],
         "dm-sans": ["DM Sans", "sans-serif"],
+        "hammersmith-one": ["Hammersmith One", "sans-serif"],
       },
       colors:{
         "black":"#121212",

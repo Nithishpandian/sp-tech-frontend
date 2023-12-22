@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductsHome } from "./ProductsHome";
-import productImg from "../../assets/images/ceramic-bulb.jpeg";
+import productImg from "../../assets/images/ceramic-bulb-holder.jpeg";
 
 const FeaturedProducts = () => {
   return (

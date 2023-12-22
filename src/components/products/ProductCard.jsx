@@ -1,15 +1,16 @@
 import React from "react";
-import bulbImg from "../../assets/images/ceramic-bulb-holder.png";
+import bulbImg from "../../assets/images/ceramic-bulb-holder.jpeg";
 
 const ProductCard = () => {
   return (
-    <div className=" border border-stone-200 rounded-lg shadow-md bg-[#fafafa]">
-      <div className=" h-fit flex items-center justify-center overflow-hidden">
-        <img className=" w-full h-64 bg-[#f5f5f5] py-4 px-2 rounded-md opacity-90 hover:scale-110 hover:grayscale hover:blur-[0.9px] duration-300" src={bulbImg} alt="" />
+    <div className="grid grid-cols-2 items-center gap-12">
+      <div className="">
+        <img className=" w-[503px] h-[368px] rounded" src={bulbImg} alt="" />
       </div>
-      <div className=" flex flex-col gap-2 py-6 px-4">
-        <h1 className=" font-noto-sans font-semibold text-black text-xl">Ceramic bulb holder</h1>
-        <p className=" text-sm text-stone-600 font-roboto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, nobis. Vitae reprehenderit id nesciunt dolorem eos enim quibusdam ab dolorum odit quaerat doloremque iste delectus sapiente saepe sunt ducimus dicta, beatae magni tempore. Assumenda minus animi, omnis tempora repellendus veniam!</p>
+      <div className="flex flex-col items-start gap-2 pr-32">
+        <h1 className=" text-[#181818] text-7xl font-hammersmith-one mb-2">01</h1>
+        <h1 className=" text-black text-3xl font-hammersmith-one">Ceramic Bulb Holder</h1>
+        <p className=" text-[#353535] font-roboto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam possimus dolor voluptas praesentium accusamus nam iusto tempore, laboriosam culpa natus ex ut sit in vel voluptatem veritatis est quis animi dolorem. Amet vel commodi veritatis adipisci tempora neque blanditiis nobis.</p>
       </div>
     </div>
   );

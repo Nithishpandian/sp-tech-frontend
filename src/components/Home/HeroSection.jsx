@@ -67,7 +67,7 @@ const HeroSection = () => {
             animate="animate"
             className=" flex justify-start gap-2"
           >
-            <button className=" z-10 relative bg-gray-100 text-stone-700 font-medium font-jost rounded-md text-sm p-4 border border-gray-400 hover:shadow-lg duration-300 cursor-pointer">
+            <button className=" z-10 relative bg-[#f6f6f6] text-stone-700 font-medium font-noto-sans rounded-md text-sm p-4 border border-gray-400 hover:shadow-lg duration-300 cursor-pointer">
               Discover the art of seamless connectivity at SP Tech. We
               specialize in precision-engineered wiring harness solutions, where
               quality meets innovation. Elevate your projects with our
