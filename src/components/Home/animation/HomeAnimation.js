@@ -13,36 +13,6 @@ export const animationVariantHeroHeading = {
     },
 }
 
-export const animationVariantHeroPara = {
-    initial: {
-        opacity: 0.9,
-        x: -600,
-    },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1.4,
-            ease: "easeInOut",
-        },
-    },
-}
-
-export const animationVariantHeroButton = {
-    initial: {
-        opacity: 0.9,
-        x: -500,
-    },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1.8,
-            ease: "easeInOut",
-        },
-    },
-}
-
 export const animationVariantWireImage = {
   initial: {
     opacity: 0,
@@ -73,7 +43,7 @@ export const animationVariantArrowBox = {
   },
 };
 
-export const animationVariantHeroImg = {
+export const animationVariantHeroCard = {
     initial: {
         opacity: 0.9,
         x: 600,
@@ -83,36 +53,6 @@ export const animationVariantHeroImg = {
         x: 0,
         transition: {
             duration: 1,
-            ease: "easeInOut",
-        },
-    },
-}
-
-export const animationVariantHeroTag = {
-    initial: {
-        opacity: 0.9,
-        x: 600,
-    },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1.2,
-            ease: "easeInOut",
-        },
-    },
-}
-
-export const animationVariantHeroTagPara = {
-    initial: {
-        opacity: 0.9,
-        x: 600,
-    },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1.8,
             ease: "easeInOut",
         },
     },
