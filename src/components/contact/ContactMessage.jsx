@@ -26,7 +26,7 @@ const ContactMessage = () => {
           to hear from you.{" "}
         </p>
         <div className=" h-full w-full flex justify-start items-end">
-          <div className=" h-fit py-2 px-14 bg-gray rounded-sm"></div>
+          <div className=" h-fit py-1.5 sm:py-2 px-10 sm:px-14 bg-gray rounded-sm"></div>
         </div>
       </motion.div>
       <motion.div

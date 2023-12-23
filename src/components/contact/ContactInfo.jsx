@@ -5,7 +5,7 @@ import { contactAnimationVariantLeft, contactAnimationVariantRight } from "./ani
 
 const ContactInfo = () => {
   return (
-    <div className=" grid lg:grid-cols-2 lg:gap-8 xl:gap-12 pt-5 sm:pt-16 pb-12 sm:pb-20 px-10 sm:px-20 md:px-24 lg:px-12 xl:px-40 2xl:px-44 ">
+    <div className=" grid lg:grid-cols-2 lg:gap-8 xl:gap-12 pt-5 sm:pt-16 pb-12 sm:pb-20 px-6 xs:px-10 sm:px-20 md:px-24 lg:px-12 xl:px-40 2xl:px-44 ">
       <motion.div
         variants={contactAnimationVariantLeft}
         initial="initial"
@@ -13,7 +13,7 @@ const ContactInfo = () => {
         viewport={{
           once: true,
         }}
-        className=" p-5 xl:p-4 2xl:p-5 flex flex-col gap-4 sm:gap-10"
+        className=" p-4 xs:p-5 xl:p-4 2xl:p-5 flex flex-col gap-4 sm:gap-10"
       >
         <div>
           <h1 className=" text-gray text-3xl sm:text-5xl font-krona-one font-bold">
