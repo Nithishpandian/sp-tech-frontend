@@ -17,7 +17,11 @@ export default {
       colors:{
         "black":"#121212",
         "gray":"#2B2C32"
-      }
+      },
+      screens: {
+        'xs': '580px',
+        '3xl': '1800px',
+      },
     },
   },
   plugins: [],

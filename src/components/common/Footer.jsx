@@ -6,7 +6,7 @@ import { LuLinkedin } from "react-icons/lu";
 const Footer = () => {
   return (
     <>
-      <div className=" flex flex-col sm:flex-row md:grid md:grid-cols-3 gap-10 bg-black py-12 px-12 sm:px-10 lg:px-16 font-noto-sans">
+      <div className=" flex flex-col sm:flex-row md:grid md:grid-cols-3 gap-10 2xl:gap-14 bg-black py-12 px-12 sm:px-10 lg:px-16 2xl:px-24 3xl:px-32 font-noto-sans">
         <div className=" flex flex-col gap-1">
           <h1 className=" text-2xl font-krona-one font-bold text-stone-300">
             SP TECH

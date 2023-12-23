@@ -14,7 +14,7 @@ const Header = () => {
         animate="animate"
         className={` ${
           isMenuOpen ? " bg-[#e9e9e9] " : "bg-[#eeeeee]" 
-        } relative flex justify-between items-center py-5 lg:py-8 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 z-50 `}
+        } relative flex justify-between items-center py-5 lg:py-8 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 2xl:px-32 3xl:px-40 z-50 `}
       >
         <div>
           <h1 className=" font-krona-one text-2xl sm:text-3xl text-stone-700 font-extrabold">

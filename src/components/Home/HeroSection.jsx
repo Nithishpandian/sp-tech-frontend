@@ -16,13 +16,13 @@ import {
 
 const HeroSection = () => {
   return (
-    <div className="grid grid-cols-3 justify-center py-14 px-20">
-      <div className=" flex flex-col gap-7 mt-10">
+    <div className="grid md:grid-cols-2 xl:grid-cols-3 justify-center md:justify-between lg:justify-center py-10 sm:py-14 px-20 md:px-10 lg:px-20 2xl:px-40 3xl:px-52">
+      <div className=" flex flex-col gap-4 sm:gap-7 md:mt-10">
         <motion.h1
           variants={animationVariantHeroHeading}
           initial="initial"
           animate="animate"
-          className=" text-stone-800 font-extrabold text-5xl leading-tight font-krona-one"
+          className=" text-stone-800 font-extrabold text-4xl sm:text-5xl md:text-4xl lg:text-5xl leading-tight font-krona-one"
         >
           Precision Wiring Harness Solutions for Innovations.
         </motion.h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           variants={animationVariantHeroPara}
           initial="initial"
           animate="animate"
-          className=" text-stone-600 font-noto-sans "
+          className=" text-stone-600 font-noto-sans text-sm xs:text-base"
         >
           Where innovation meets precision in wiring solutions. With a
           commitment to excellence, we specialize in crafting reliable and
@@ -55,11 +55,11 @@ const HeroSection = () => {
         variants={animationVariantWireImage}
         initial="initial"
         animate="animate"
-        className=" -mt-12 h-fit"
+        className=" xl:-mt-12 h-fit hidden md:flex justify-center items-center"
       >
-        <img className=" h-[88%]" src={wireImg} alt="" />
+        <img className=" w-72 lg:w-[65%] xl:w-[75%] 2xl:h-[88%]" src={wireImg} alt="" />
       </motion.div>
-      <div className=" flex flex-col justify-around">
+      <div className=" hidden xl:flex flex-col justify-around">
         <div className=" flex justify-start -ml-16 mr-16 -mt-10">
           <motion.div
             variants={animationVariantArrowBox}
