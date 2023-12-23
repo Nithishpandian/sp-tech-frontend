@@ -7,7 +7,7 @@ const ContactMessage = () => {
         <h1 className=" font-krona-one text-4xl text-gray">
           SEND US A MESSAGE
         </h1>
-        <p className="font-dm-sans text-stone-500 ">
+        <p className="font-dm-sans 2xl:text-lg text-stone-500 ">
           If you're interested in hearing more about the way we work, have a
           business proposal, or are interested in making a purchase, we'd love
           to hear from you.{" "}
@@ -16,7 +16,7 @@ const ContactMessage = () => {
           <div className=" h-fit py-2 px-14 bg-gray rounded-sm"></div>
         </div>
       </div>
-      <div className=" flex flex-col gap-5 font-jost text-stone-600">
+      <div className=" flex flex-col gap-5 font-jost text-stone-600 xl:text-lg 2xl:text-xl">
         <div className=" flex flex-col">
           <label htmlFor="">Name *</label>
           <input

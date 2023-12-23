@@ -12,20 +12,20 @@ const ContactInfo = () => {
         </div>
         <div className=" grid min-[450px]:grid-cols-2 justify-between gap-4 min-[450px]:gap-2">
           <div>
-            <h1 className=" font-krona-one text-gray text-lg">CONTACTS</h1>
-            <div className=" flex flex-col mt-1">
-              <p className=" font-dm-sans font-light text-stone-500 text-sm">
+            <h1 className=" font-krona-one text-gray text-lg 2xl:text-xl">CONTACTS</h1>
+            <div className=" flex flex-col mt-1 xl:mt-2">
+              <p className=" font-dm-sans font-light text-stone-500 text-sm xl:text-base">
                 123-456-789
               </p>
-              <p className=" font-dm-sans font-light text-stone-500 text-sm">
+              <p className=" font-dm-sans font-light text-stone-500 text-sm xl:text-base">
                 nithish@gmail.com
               </p>
             </div>
           </div>
           <div>
-            <h1 className=" font-krona-one text-gray text-lg">ADDRESS</h1>
-            <div className=" flex flex-col mt-1">
-              <p className=" font-dm-sans font-light text-stone-500 text-sm">
+            <h1 className=" font-krona-one text-gray text-lg 2xl:text-xl">ADDRESS</h1>
+            <div className=" flex flex-col mt-1 xl:mt-2">
+              <p className=" font-dm-sans font-light text-stone-500 text-sm xl:text-base">
                 1st Floor, S.F. No. 461/2 CRPF Road, Thoppampatti post,
                 Coimbatore, Tamil Nadu, 641017
               </p>

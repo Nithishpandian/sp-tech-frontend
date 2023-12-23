@@ -22,7 +22,7 @@ const AboutUsInfo = () => {
           <h1 className=" text-gray text-4xl sm:text-5xl font-krona-one font-bold">
             About Us
           </h1>
-          <div className=" flex flex-col gap-3 text-stone-700 text-xs sm:text-sm font-light">
+          <div className=" flex flex-col gap-3 text-stone-700 text-xs sm:text-sm 2xl:text-base font-light">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
               nulla nihil. Vel ut rerum dignissimos, officia neque illum eaque

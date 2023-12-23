@@ -4,7 +4,7 @@ import bulbImg from "../../assets/images/products/ceramic-bulb-holder.jpeg";
 const ProductCard = () => {
   return (
     <div className="grid md:grid-cols-2 items-center gap-6 md:gap-7 lg:gap-12 w-80 sm:w-auto">
-      <div className="">
+      <div className=" xl:flex justify-center items-center ">
         <img className=" w-[328px] h-[246px] lg:w-[503px] lg:h-[368px] rounded" src={bulbImg} alt="" />
       </div>
       <div className="flex flex-col items-start gap-1 lg:gap-2 lg:pr-12 xl:pr-28 2xl:pr-32">
