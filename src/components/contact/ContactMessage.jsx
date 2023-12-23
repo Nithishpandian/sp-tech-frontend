@@ -1,9 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
+import {
+  contactAnimationVariantLeft,
+  contactAnimationVariantRight,
+} from "./animation/ContactAnimation";
 
 const ContactMessage = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-20 bg-[#D9DFE5] py-14 sm:py-20 px-8 min-[450px]:px-20 sm:px-24 md:px-44 lg:px-36 xl:px-52 2xl:px-64 ">
-      <div className=" flex flex-col gap-3 pr-12 pb-1">
+      <motion.div
+        variants={contactAnimationVariantLeft}
+        initial="initial"
+        whileInView={"animate"}
+        viewport={{
+          once: true,
+        }}
+        className=" flex flex-col gap-3 pr-12 pb-1"
+      >
         <h1 className=" font-krona-one text-4xl text-gray">
           SEND US A MESSAGE
         </h1>
@@ -15,8 +28,16 @@ const ContactMessage = () => {
         <div className=" h-full w-full flex justify-start items-end">
           <div className=" h-fit py-2 px-14 bg-gray rounded-sm"></div>
         </div>
-      </div>
-      <div className=" flex flex-col gap-5 font-jost text-stone-600 xl:text-lg 2xl:text-xl">
+      </motion.div>
+      <motion.div
+        variants={contactAnimationVariantRight}
+        initial="initial"
+        whileInView={"animate"}
+        viewport={{
+          once: true,
+        }}
+        className=" flex flex-col gap-5 font-jost text-stone-600 xl:text-lg 2xl:text-xl"
+      >
         <div className=" flex flex-col">
           <label htmlFor="">Name *</label>
           <input
@@ -54,7 +75,7 @@ const ContactMessage = () => {
             SUBMIT
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

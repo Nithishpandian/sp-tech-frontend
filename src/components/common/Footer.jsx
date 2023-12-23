@@ -2,10 +2,19 @@ import React from "react";
 import { CiInstagram } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
 import { LuLinkedin } from "react-icons/lu";
+import { motion } from "framer-motion";
+import { animationVariantFooter } from "./animation/HeaderFooterAnimation";
 
 const Footer = () => {
   return (
-    <>
+    <motion.div
+      variants={animationVariantFooter}
+      initial="initial"
+      whileInView={"animate"}
+      viewport={{
+        once: true,
+      }}
+    >
       <div className=" flex flex-col sm:flex-row md:grid md:grid-cols-3 gap-10 2xl:gap-14 bg-black py-12 px-12 sm:px-10 lg:px-16 2xl:px-24 3xl:px-32 font-noto-sans">
         <div className=" flex flex-col gap-1">
           <h1 className=" text-2xl font-krona-one font-bold text-stone-300">
@@ -43,17 +52,34 @@ const Footer = () => {
             Links
           </h2>
           <div className=" flex flex-col gap-1 text-stone-400">
-            <a href="/home" className="hover:text-stone-500 duration-300 w-fit">Home</a>
-            <a href="/about-us" className="hover:text-stone-500 duration-300 w-fit">About us</a>
-            <a href="/products" className="hover:text-stone-500 duration-300 w-fit">Products</a>
-            <a href="/contact" className="hover:text-stone-500 duration-300 w-fit">contact</a>
+            <a href="/home" className="hover:text-stone-500 duration-300 w-fit">
+              Home
+            </a>
+            <a
+              href="/about-us"
+              className="hover:text-stone-500 duration-300 w-fit"
+            >
+              About us
+            </a>
+            <a
+              href="/products"
+              className="hover:text-stone-500 duration-300 w-fit"
+            >
+              Products
+            </a>
+            <a
+              href="/contact"
+              className="hover:text-stone-500 duration-300 w-fit"
+            >
+              contact
+            </a>
           </div>
         </div>
       </div>
       <div className="bg-black border-t border-stone-800 text-stone-600 font-medium text-center py-1.5 font-mono text-sm sm:text-base">
-        <p>Copyright &#169;	2023. All rights reserved</p>
+        <p>Copyright &#169; 2023. All rights reserved</p>
       </div>
-    </>
+    </motion.div>
   );
 };
 

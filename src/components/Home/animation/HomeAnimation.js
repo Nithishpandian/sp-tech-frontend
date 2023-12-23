@@ -1,17 +1,17 @@
 export const animationVariantHeroHeading = {
-    initial: {
-        opacity: 0.9,
-        x: -600,
+  initial: {
+    opacity: 0.9,
+    x: -600,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
     },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1,
-            ease: "easeInOut",
-        },
-    },
-}
+  },
+};
 
 export const animationVariantWireImage = {
   initial: {
@@ -44,16 +44,61 @@ export const animationVariantArrowBox = {
 };
 
 export const animationVariantHeroCard = {
-    initial: {
-        opacity: 0.9,
-        x: 600,
+  initial: {
+    opacity: 0.9,
+    x: 600,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
     },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1,
-            ease: "easeInOut",
-        },
+  },
+};
+
+export const animationVariantHeading = {
+  initial: {
+    opacity: 0,
+    x: 0,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 2,
+      ease: "easeInOut",
     },
-}
+  },
+};
+
+export const animationVariantProducts = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.2,
+      duration: 0.5,
+    },
+  }),
+};
+
+export const animationVariantOffer = {
+  initial: {
+    opacity: 0,
+    x: 0,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
+};

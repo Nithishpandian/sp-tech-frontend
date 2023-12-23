@@ -3,12 +3,25 @@ import aboutImg from "../../assets/images/about-us/about-us.avif";
 import decorationImg from "../../assets/icons/decoration.svg";
 import decorationWhiteImg from "../../assets/icons/decoration-white.svg";
 import DecorationAboutUs from "./DecorationAboutUs";
+import { motion } from "framer-motion";
+import {
+  aboutAnimationVariantLeft,
+  aboutAnimationVariantRight,
+} from "./animation/AboutAnimation";
 
 const AboutUsInfo = () => {
   return (
     <div>
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center items-center lg:gap-1 pt-5 sm:pt-16 pb-12 sm:pb-20 px-5 sm:px-20 md:px-36 lg:px-12 xl:px-40 2xl:px-44 ">
-        <div className=" order-2 lg:order-1 flex justify-center items-center">
+        <motion.div
+          variants={aboutAnimationVariantLeft}
+          initial="initial"
+          whileInView={"animate"}
+          viewport={{
+            once: true,
+          }}
+          className=" order-2 lg:order-1 flex justify-center items-center"
+        >
           <div className="relative w-fit h-fit">
             <img className=" opacity-90" src={aboutImg} alt="" />
             <img
@@ -17,8 +30,16 @@ const AboutUsInfo = () => {
               alt=""
             />
           </div>
-        </div>
-        <div className=" order-1 lg:order-2 p-4 sm:p-6 md:py-7 md:px-4 lg:p-8 xl:p-10 flex flex-col gap-5 lg:gap-10">
+        </motion.div>
+        <motion.div
+          variants={aboutAnimationVariantRight}
+          initial="initial"
+          whileInView={"animate"}
+          viewport={{
+            once: true,
+          }}
+          className=" order-1 lg:order-2 p-4 sm:p-6 md:py-7 md:px-4 lg:p-8 xl:p-10 flex flex-col gap-5 lg:gap-10"
+        >
           <h1 className=" text-gray text-4xl sm:text-5xl font-krona-one font-bold">
             About Us
           </h1>
@@ -50,11 +71,23 @@ const AboutUsInfo = () => {
           <div className=" h-full w-full flex justify-end items-end">
             <div className=" h-fit py-1.5 min-[450px]:py-2 px-10 min-[450px]:px-14 bg-gray rounded-sm"></div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className=" grid lg:grid-cols-2 gap-12 md:gap-16 xl:gap-28 2xl:gap-36 justify-between bg-gray py-28 px-8 sm:px-24 md:px-44 lg:px-20 xl:px-36 2xl:px-48">
-        <div className=" flex flex-col gap-4 lg:gap-9 xl:gap-12">
-          <img className=" sm:hidden flex w-10" src={decorationWhiteImg} alt="" />
+        <motion.div
+          variants={aboutAnimationVariantLeft}
+          initial="initial"
+          whileInView={"animate"}
+          viewport={{
+            once: true,
+          }}
+          className=" flex flex-col gap-4 lg:gap-9 xl:gap-12"
+        >
+          <img
+            className=" sm:hidden flex w-10"
+            src={decorationWhiteImg}
+            alt=""
+          />
           <h1 className=" text-stone-200 text-3xl sm:text-4xl xl:text-5xl font-krona-one font-bold">
             OUR MISSION
           </h1>
@@ -65,9 +98,21 @@ const AboutUsInfo = () => {
             clients with the perfect properties that fit their tastes, needs, and
             budgets.`}
           />
-        </div>
-        <div className=" flex flex-col gap-4 lg:gap-9 xl:gap-12">
-          <img className=" sm:hidden flex w-10" src={decorationWhiteImg} alt="" />
+        </motion.div>
+        <motion.div
+          variants={aboutAnimationVariantRight}
+          initial="initial"
+          whileInView={"animate"}
+          viewport={{
+            once: true,
+          }}
+          className=" flex flex-col gap-4 lg:gap-9 xl:gap-12"
+        >
+          <img
+            className=" sm:hidden flex w-10"
+            src={decorationWhiteImg}
+            alt=""
+          />
           <h1 className=" text-stone-200 text-3xl sm:text-4xl xl:text-5xl font-krona-one font-bold">
             OUR VISION
           </h1>
@@ -78,7 +123,7 @@ const AboutUsInfo = () => {
             clients with the perfect properties that fit their tastes, needs, and
             budgets.`}
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

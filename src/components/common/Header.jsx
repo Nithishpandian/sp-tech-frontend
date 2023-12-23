@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { animationVariantHeader } from "./animation/HeaderAnimation";
+import { animationVariantHeader } from "./animation/HeaderFooterAnimation";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 
