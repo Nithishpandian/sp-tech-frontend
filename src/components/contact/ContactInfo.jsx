@@ -60,7 +60,7 @@ const ContactInfo = () => {
         className=""
       >
         <img
-          className=" opacity-80 grayscale rounded h-80 w-full object-cover"
+          className=" opacity-80 rounded h-80 w-full object-cover"
           src={workingImg}
           alt=""
         />
