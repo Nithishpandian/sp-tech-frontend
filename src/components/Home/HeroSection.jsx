@@ -12,7 +12,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="grid md:grid-cols-2 xl:grid-cols-3 justify-center md:justify-between lg:justify-center py-10 sm:py-14 px-20 md:px-10 lg:px-20 2xl:px-40 3xl:px-52">
       <motion.div
@@ -30,7 +30,10 @@ const HeroSection = () => {
           tailored wiring harnesses for diverse applications
         </p>
         <div>
-          <button onClick={()=>navigate("/contact")} className="group/button overflow-hidden relative border border-[#202020] rounded-md  bg-black py-2 px-4 text-white font-semibold font-noto-sans">
+          <button
+            onClick={() => navigate("/contact")}
+            className="group/button overflow-hidden relative border border-[#202020] rounded-md  bg-black py-2 px-4 text-white font-semibold font-noto-sans"
+          >
             <div className="duration-300 group-hover/button:-translate-y-8 ">
               Contact
             </div>
