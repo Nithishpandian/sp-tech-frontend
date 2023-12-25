@@ -1,7 +1,10 @@
 import React from "react";
 import workingImg from "../../assets/images/common/working.jpeg";
 import { motion } from "framer-motion";
-import { contactAnimationVariantLeft, contactAnimationVariantRight } from "./animation/ContactAnimation";
+import {
+  contactAnimationVariantLeft,
+  contactAnimationVariantRight,
+} from "./animation/ContactAnimation";
 
 const ContactInfo = () => {
   return (
@@ -27,10 +30,10 @@ const ContactInfo = () => {
             </h1>
             <div className=" flex flex-col mt-1 xl:mt-2">
               <p className=" font-dm-sans font-light text-stone-500 text-sm xl:text-base">
-                123-456-789
+                +91 8189894433
               </p>
               <p className=" font-dm-sans font-light text-stone-500 text-sm xl:text-base">
-                nithish@gmail.com
+                sptech.cbe@gmail.com
               </p>
             </div>
           </div>
