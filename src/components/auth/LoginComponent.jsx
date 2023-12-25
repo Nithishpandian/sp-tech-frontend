@@ -21,6 +21,7 @@ const LoginComponent = () => {
       .post(`${import.meta.env.VITE_API_URL}/admin/login`, formData)
       .then((res) => {
         console.log(res);
+        sessionStorage.setItem("adminToken", JSON.stringify(res.data.token))
       })
       .catch((err) => {
         console.log(err);
