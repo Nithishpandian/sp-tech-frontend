@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import bulbImg from "../../assets/images/products/ceramic-bulb-holder.jpeg";
 import ProductCard from "./ProductCard";
 import { motion } from "framer-motion";
 import { productAnimationVariant } from "./animation/ProductAnimation";
@@ -9,6 +8,9 @@ import axios from "axios";
 
 const ProductContainer = () => {
   const [products, setProducts] = useState([]);
+  const handleAddProduct = () => {
+    setOpenPopup(true);
+  };
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/product/getproducts`)
@@ -24,10 +26,6 @@ const ProductContainer = () => {
   const [token, setToken] = useState(adminToken);
 
   const [openPopup, setOpenPopup] = useState(false);
-
-  const handleAddProduct = () => {
-    setOpenPopup(true);
-  };
 
   return (
     <div className=" flex flex-col justify-center items-center gap-20 px-6 sm:px-36 md:px-7 lg:px-16 xl:px-36 2xl:px-40 3xl:px-44 py-16">

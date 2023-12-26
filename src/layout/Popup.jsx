@@ -86,13 +86,13 @@ export default function Popup({ openPopup, setOpenPopup }) {
             <div className=" grid grid-cols-2 gap-2 items-center justify-center mt-2">
               <button
                 onClick={handleClose}
-                className="border border-stone-800 bg-white text-stone-800 py-2 px-2 rounded hover:opacity-80 duration-300 font-medium"
+                className="border border-dark-blue bg-white text-dark-blue py-2 px-2 rounded hover:opacity-80 duration-300 font-medium"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="border border-stone-800 bg-stone-800 text-white py-2 px-2 rounded hover:opacity-80 duration-300 font-medium"
+                className="border border-dark-blue bg-dark-blue text-white py-2 px-2 rounded hover:opacity-80 duration-300 font-medium"
               >
                 Submit
               </button>

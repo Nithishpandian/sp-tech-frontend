@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { MdDelete } from "react-icons/md";
+import { adminToken } from "../../utils/api";
+import axios from "axios";
 
 const ProductCard = ({ id, image, number, name, description }) => {
+  const [token, setToken] = useState(adminToken);
+
+  const handleDeleteProduct = () => {
+    axios
+      .post(`${import.meta.env.VITE_API_URL}/product/deleteproduct`, { id })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
-    <div className=" relative">
-      <div className="grid md:grid-cols-2 items-center gap-6 md:gap-7 lg:gap-12 w-80 sm:w-auto">
-        <div className=" xl:flex justify-center items-center ">
-          <img
-            className=" w-[328px] h-[246px] lg:w-[503px] lg:h-[350px] opacity-95 rounded"
-            src={image}
-            alt=""
-          />
-        </div>
+    <div className="grid md:grid-cols-2 items-center gap-6 md:gap-7 lg:gap-12 w-80 sm:w-auto">
+      <div className=" xl:flex justify-center items-center ">
+        <img
+          className=" w-[328px] h-[246px] lg:w-[503px] lg:h-[350px] opacity-95 rounded"
+          src={image}
+          alt=""
+        />
+      </div>
+      <div className="relative">
         <div className="flex flex-col items-start gap-1 lg:gap-2 lg:pr-12 xl:pr-28 2xl:pr-32">
           <h1 className=" text-primary text-6xl sm:text-7xl font-hammersmith-one gap-1 lg:mb-2">
             {number}
@@ -20,9 +36,14 @@ const ProductCard = ({ id, image, number, name, description }) => {
             {description}
           </p>
         </div>
-      </div>
-      <div className=" absolute right-0 top-3">
-
+        <div
+          onClick={handleDeleteProduct}
+          className={`${
+            token === "" || token === null ? "hidden" : "flex"
+          } absolute right-10 top-3 w-fit h-fit cursor-pointer`}
+        >
+          <MdDelete className=" text-3xl text-stone-500" />
+        </div>
       </div>
     </div>
   );
