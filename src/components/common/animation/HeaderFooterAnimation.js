@@ -15,7 +15,7 @@ export const animationVariantHeader = {
 
 export const animationVariantFooter = {
     initial: {
-        opacity: 0.8,
+        opacity: 0.9,
         y: 0,
     },
     animate: {

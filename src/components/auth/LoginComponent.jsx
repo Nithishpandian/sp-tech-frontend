@@ -86,7 +86,7 @@ const LoginComponent = () => {
           </div>
         </div>
         <button
-          className=" duration-300 hover:bg-white hover:text-blue border hover:border-blue bg-blue rounded-md text-white py-[9px] font-semibold font-noto-sans w-full"
+          className=" duration-300 hover:bg-white hover:text-primary border hover:border-primary bg-primary rounded-md text-white py-[9px] font-semibold font-noto-sans w-full"
           type="submit"
         >
           {"Sign in"}

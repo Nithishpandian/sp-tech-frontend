@@ -15,10 +15,11 @@ export default {
         "hammersmith-one": ["Hammersmith One", "sans-serif"],
       },
       colors:{
+        "primary":"#185e96",
+        "dark-blue":"#196684",
         "white":"#fdfdfd",
         "black":"#121212",
         "gray":"#2B2C32",
-        "blue":"#2378BD",
       },
       screens: {
         'xs': '580px',

@@ -62,7 +62,7 @@ const ProductContainer = () => {
       >
         <button
           onClick={handleAddProduct}
-          className=" bg-gray text-white py-2 px-4 rounded font-noto-sans font-medium hover:bg-black duration-300"
+          className=" bg-primary text-white py-2 px-4 rounded font-noto-sans font-medium hover:opacity-90 duration-300"
         >
           Add Product
         </button>

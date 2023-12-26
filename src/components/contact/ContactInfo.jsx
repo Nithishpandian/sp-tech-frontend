@@ -19,13 +19,13 @@ const ContactInfo = () => {
         className=" p-4 xs:p-5 xl:p-4 2xl:p-5 flex flex-col gap-4 sm:gap-10"
       >
         <div>
-          <h1 className=" text-gray text-3xl sm:text-5xl font-krona-one font-bold">
+          <h1 className=" text-dark-blue text-3xl sm:text-5xl font-krona-one font-bold">
             CONTACT US
           </h1>
         </div>
         <div className=" grid min-[450px]:grid-cols-2 justify-between gap-4 min-[450px]:gap-2">
           <div>
-            <h1 className=" font-krona-one text-gray text-lg 2xl:text-xl">
+            <h1 className=" font-krona-one text-primary text-lg 2xl:text-xl">
               CONTACTS
             </h1>
             <div className=" flex flex-col mt-1 xl:mt-2">
@@ -38,7 +38,7 @@ const ContactInfo = () => {
             </div>
           </div>
           <div>
-            <h1 className=" font-krona-one text-gray text-lg 2xl:text-xl">
+            <h1 className=" font-krona-one text-primary text-lg 2xl:text-xl">
               ADDRESS
             </h1>
             <div className=" flex flex-col mt-1 xl:mt-2">
@@ -50,7 +50,7 @@ const ContactInfo = () => {
           </div>
         </div>
         <div className=" h-full w-full flex justify-end items-end">
-          <div className=" h-fit py-1.5 min-[450px]:py-2 px-10 min-[450px]:px-14 bg-gray rounded-sm"></div>
+          <div className=" h-fit py-1.5 min-[450px]:py-2 px-10 min-[450px]:px-14 bg-dark-blue rounded-sm"></div>
         </div>
       </motion.div>
       <motion.div

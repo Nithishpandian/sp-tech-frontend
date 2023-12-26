@@ -21,7 +21,7 @@ const HeroSection = () => {
         animate="animate"
         className=" flex flex-col gap-4 sm:gap-7 md:mt-10"
       >
-        <h1 className=" text-stone-800 font-extrabold text-4xl sm:text-5xl md:text-4xl lg:text-5xl leading-tight font-krona-one">
+        <h1 className=" text-stone-700 font-extrabold text-4xl sm:text-5xl md:text-4xl lg:text-5xl leading-tight font-krona-one">
           Precision Wiring Harness Solutions for Innovations.
         </h1>
         <p className=" text-stone-600 font-noto-sans text-sm xs:text-base">
@@ -32,7 +32,7 @@ const HeroSection = () => {
         <div>
           <button
             onClick={() => navigate("/contact")}
-            className="group/button overflow-hidden relative border border-[#202020] rounded-md  bg-black py-2 px-4 text-white font-semibold font-noto-sans"
+            className="group/button overflow-hidden relative border border-dark-blue rounded-md  bg-dark-blue py-2 px-4 text-white font-semibold font-noto-sans"
           >
             <div className="duration-300 group-hover/button:-translate-y-8 ">
               Contact

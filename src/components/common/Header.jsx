@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { animationVariantHeader } from "./animation/HeaderFooterAnimation";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
+import logo from "../../assets/images/common/logo.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,27 +14,25 @@ const Header = () => {
         initial="initial"
         animate="animate"
         className={` ${
-          isMenuOpen ? " bg-[#e9e9e9] " : "bg-[#eeeeee]" 
-        } relative flex justify-between items-center py-5 lg:py-8 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 2xl:px-32 3xl:px-40 z-50 `}
+          isMenuOpen ? " bg-[#e9e9e9] " : "bg-[#fdfdfd]" 
+        } relative flex justify-between items-center py-4 lg:py-6 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 2xl:px-32 3xl:px-40 z-50 `}
       >
         <div>
-          <h1 className=" font-krona-one text-2xl sm:text-3xl text-stone-700 font-extrabold">
-            SP TECH
-          </h1>
+          <img className=" w-32" src={logo} alt="" />
         </div>
         <div
           className={`hidden sm:flex sm:items-center sm:justify-center gap-6 sm:gap-4 xl:gap-8 text-stone-600 font-dm-sans text-lg`}
         >
-          <a className=" hover:text-stone-400 duration-300" href="/">
+          <a className=" hover:text-dark-blue duration-300" href="/">
             Home
           </a>
-          <a className=" hover:text-stone-400 duration-300" href="/products">
+          <a className=" hover:text-dark-blue duration-300" href="/products">
             Products
           </a>
-          <a className=" hover:text-stone-400 duration-300" href="/about-us">
+          <a className=" hover:text-dark-blue duration-300" href="/about-us">
             About us
           </a>
-          <a className=" hover:text-stone-400 duration-300" href="contact">
+          <a className=" hover:text-dark-blue duration-300" href="contact">
             Contact
           </a>
         </div>
