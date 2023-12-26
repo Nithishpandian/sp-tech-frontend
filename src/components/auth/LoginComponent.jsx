@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../../assets/images/common/logo.png";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 
 const LoginComponent = () => {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     userName: "",
@@ -22,6 +24,7 @@ const LoginComponent = () => {
       .then((res) => {
         console.log(res);
         sessionStorage.setItem("adminToken", JSON.stringify(res.data.token))
+        navigate("/")
       })
       .catch((err) => {
         console.log(err);
@@ -53,6 +56,7 @@ const LoginComponent = () => {
             onChange={(e) => onChange(e)}
             value={userName}
             name="userName"
+            required
           />
           <div className=" relative w-full">
             <input
@@ -62,6 +66,7 @@ const LoginComponent = () => {
               onChange={(e) => onChange(e)}
               value={password}
               name="password"
+              required
             />
             <div className=" absolute right-4 top-1/2 transform -translate-y-1/2">
               {showPassword ? (
