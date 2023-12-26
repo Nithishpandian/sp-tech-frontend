@@ -16,7 +16,7 @@ const Footer = () => {
         once: true,
       }}
     >
-      <div className=" flex flex-col sm:flex-row md:grid md:grid-cols-3 gap-10 2xl:gap-14 bg-[#196684] py-12 px-12 sm:px-10 lg:px-16 2xl:px-24 3xl:px-32 font-noto-sans">
+      <div className=" flex flex-col sm:flex-row md:grid md:grid-cols-3 gap-10 2xl:gap-14 bg-gradient-to-t from-dark-blue bg-[#145b77] py-12 px-12 sm:px-10 lg:px-16 2xl:px-24 3xl:px-32 font-noto-sans">
         <div className=" flex flex-col gap-1">
           <img className=" w-32 mb-1" src={logo} alt="" />
           <p className=" text-stone-300">
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#196684] border-t border-stone-400 text-stone-300 font-medium text-center py-1.5 font-mono text-sm sm:text-base">
+      <div className="bg-[#145b77] border-t border-stone-400 text-stone-300 font-medium text-center py-1.5 font-mono text-sm sm:text-base">
         <p>Copyright &#169; 2023. All rights reserved</p>
       </div>
     </motion.div>

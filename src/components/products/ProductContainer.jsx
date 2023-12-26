@@ -31,7 +31,7 @@ const ProductContainer = () => {
 
   return (
     <div className=" flex flex-col justify-center items-center gap-20 px-6 sm:px-36 md:px-7 lg:px-16 xl:px-36 2xl:px-40 3xl:px-44 py-16">
-      {products.length > 0 ?
+      {products.length > 0 ? (
         products.map((product, index) => {
           return (
             <motion.div
@@ -44,17 +44,22 @@ const ProductContainer = () => {
               }}
             >
               <ProductCard
+                id={product._id}
                 image={`${import.meta.env.VITE_API_IMAGE_URL}${
                   product.productImage
                 }`}
-                number={`0${index+1}`}
+                number={`0${index + 1}`}
                 name={product.productName}
                 description={product.productDescription}
               />
             </motion.div>
           );
-        }) : <div className=" py-10 px-2 text-xl text-gray font-noto-sans">No Products available</div>
-      }
+        })
+      ) : (
+        <div className=" py-10 px-2 text-xl text-gray font-noto-sans">
+          No Products available
+        </div>
+      )}
       <div
         className={` ${
           token === "" || token === null ? "hidden" : "flex"

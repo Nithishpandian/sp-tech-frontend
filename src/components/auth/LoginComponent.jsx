@@ -52,7 +52,7 @@ const LoginComponent = () => {
           <input
             type="text"
             placeholder="username"
-            className=" py-2 px-3 focus:outline-none rounded bg-stone-50 w-full"
+            className=" py-2 px-3 focus:outline-none rounded bg-stone-200 w-full"
             onChange={(e) => onChange(e)}
             value={userName}
             name="userName"
@@ -62,7 +62,7 @@ const LoginComponent = () => {
             <input
               type={`${showPassword ? "text" : "password"}`}
               placeholder="password"
-              className=" py-2 px-3 focus:outline-none rounded bg-stone-50 w-full"
+              className=" py-2 px-3 focus:outline-none rounded bg-stone-200 w-full"
               onChange={(e) => onChange(e)}
               value={password}
               name="password"
