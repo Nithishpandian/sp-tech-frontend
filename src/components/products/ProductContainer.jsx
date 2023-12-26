@@ -54,7 +54,7 @@ const ProductContainer = () => {
           );
         })
       ) : (
-        <div className=" py-10 px-2 text-xl text-gray font-noto-sans">
+        <div className=" my-36 py-10 px-2 text-xl text-gray font-noto-sans">
           No Products available
         </div>
       )}
