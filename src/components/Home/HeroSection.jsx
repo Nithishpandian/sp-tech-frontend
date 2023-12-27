@@ -1,5 +1,5 @@
 import React from "react";
-import heroIMG1 from "../../assets/images/slider/slider-1.png";
+import heroIMG1 from "../../assets/images/slider/slider-1.jpg";
 import heroIMG2 from "../../assets/images/slider/slider-2.jpg";
 import heroIMG3 from "../../assets/images/slider/slider-3.jpg";
 import heroIMG4 from "../../assets/images/slider/slider-4.jpg";
