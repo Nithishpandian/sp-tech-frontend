@@ -15,7 +15,7 @@ const Header = () => {
         animate="animate"
         className={` ${
           isMenuOpen ? " bg-[#e9e9e9] " : "bg-[#fdfdfd]" 
-        } relative flex justify-between items-center py-4 lg:py-6 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 2xl:px-32 3xl:px-40 z-50 `}
+        } relative flex justify-between items-center border-b border-b-stone-200 py-4 lg:py-6 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 2xl:px-32 3xl:px-40 z-50 `}
       >
         <div>
           <img className=" w-32" src={logo} alt="" />
