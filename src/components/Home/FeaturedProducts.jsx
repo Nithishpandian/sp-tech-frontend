@@ -49,9 +49,7 @@ const FeaturedProducts = () => {
                 >
                   <ProductsHome
                     key={index}
-                    image={`${import.meta.env.VITE_API_IMAGE_URL}${
-                      product.productImage
-                    }`}
+                    image={product.productImage.url}
                     name={product.productName}
                   />
                 </motion.div>

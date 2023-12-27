@@ -9,8 +9,17 @@ export default function Popup({ openPopup, setOpenPopup }) {
   const [image, setImage] = useState("");
   const handleImage = (e) => {
     const file = e.target.files[0];
-    setImage(file);
-    console.log(image);
+    convertToBase64(file);
+  };
+  const convertToBase64 = (file) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setImage(reader.result);
+    };
+    reader.onerror = (error) => {
+      console.log("Error: ", error);
+    };
   };
 
   const handleClose = () => {
@@ -23,14 +32,11 @@ export default function Popup({ openPopup, setOpenPopup }) {
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(productName, productDescription, image);
-    await axios.post(`${import.meta.env.VITE_API_URL}/product`, {
+    await axios
+      .post(`${import.meta.env.VITE_API_URL}/product`, {
         productName,
         productDescription,
         productImage: image,
-      },{
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
       })
       .then((res) => {
         console.log(res);
@@ -72,15 +78,40 @@ export default function Popup({ openPopup, setOpenPopup }) {
               onChange={(e) => setProductDescription(e.target.value)}
               value={productDescription}
             ></textarea>
-            <div className="">
-              <div className="flex justify-center items-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-                <input
-                  id="image"
-                  name="productImage"
-                  type="file"
-                  onChange={handleImage}
-                  required
-                />
+            <div className=" mt-2">
+              <div className="flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-5">
+                <div className="text-center">
+                  {image === "" || image == null ? (
+                    "No Image"
+                  ) : (
+                    <img
+                      className="mx-auto h-24 w-44 object-cover"
+                      src={image}
+                      alt="Blog"
+                    />
+                  )}
+                  <div className="mt-4 flex text-sm leading-6 text-gray-600">
+                    <label
+                      htmlFor="image"
+                      className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none hover:text-indigo-500"
+                    >
+                      <span>Upload a file</span>
+                      <input
+                        id="image"
+                        name="image"
+                        type="file"
+                        accept="image/"
+                        className="sr-only"
+                        onChange={handleImage}
+                        required
+                      />
+                    </label>
+                    <p className="pl-1">or drag and drop</p>
+                  </div>
+                  <p className="text-xs text-gray-600">
+                    PNG, JPG, GIF up to 10MB
+                  </p>
+                </div>
               </div>
             </div>
             <div className=" grid grid-cols-2 gap-2 items-center justify-center mt-2">

@@ -43,9 +43,7 @@ const ProductContainer = () => {
             >
               <ProductCard
                 id={product._id}
-                image={`${import.meta.env.VITE_API_IMAGE_URL}${
-                  product.productImage
-                }`}
+                image={product.productImage.url}
                 number={`0${index + 1}`}
                 name={product.productName}
                 description={product.productDescription}
