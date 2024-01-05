@@ -5,6 +5,7 @@ import { LuLinkedin } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { animationVariantFooter } from "./animation/HeaderFooterAnimation";
 import logo from "../../assets/images/common/logo.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -51,27 +52,27 @@ const Footer = () => {
             Links
           </h2>
           <div className=" flex flex-col gap-1 text-stone-300">
-            <a href="/home" className="hover:text-stone-100 duration-300 w-fit">
+            <Link to="/home" className="hover:text-stone-100 duration-300 w-fit">
               Home
-            </a>
-            <a
-              href="/about-us"
+            </Link>
+            <Link
+              to="/about-us"
               className="hover:text-stone-100 duration-300 w-fit"
             >
               About us
-            </a>
-            <a
-              href="/products"
+            </Link>
+            <Link
+              to="/products"
               className="hover:text-stone-100 duration-300 w-fit"
             >
               Products
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="hover:text-stone-100 duration-300 w-fit"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </div>

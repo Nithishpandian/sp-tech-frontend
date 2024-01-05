@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { animationVariantHeader } from "./animation/HeaderFooterAnimation";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -15,26 +16,26 @@ const Header = () => {
         animate="animate"
         className={` ${
           isMenuOpen ? " bg-[#e9e9e9] " : "bg-[#fdfdfd]" 
-        } relative flex justify-between items-center border-b border-b-stone-200 py-4 lg:py-6 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 2xl:px-32 3xl:px-40 z-50 `}
+        } relative flex justify-between items-center border-b border-b-stone-200 py-3 lg:py-5 px-9 sm:px-7 md:px-10 lg:px-16 xl:px-28 2xl:px-32 3xl:px-40 z-50 `}
       >
-        <div>
-          <img className=" w-32" src={logo} alt="" />
-        </div>
+        <Link to="/">
+          <img className=" w-36" src={logo} alt="" />
+        </Link>
         <div
           className={`hidden sm:flex sm:items-center sm:justify-center gap-6 sm:gap-4 xl:gap-8 text-stone-600 font-dm-sans text-lg`}
         >
-          <a className=" hover:text-dark-blue duration-300" href="/">
+          <Link className=" hover:text-dark-blue duration-300" to="/">
             Home
-          </a>
-          <a className=" hover:text-dark-blue duration-300" href="/products">
+          </Link>
+          <Link className=" hover:text-dark-blue duration-300" to="/products">
             Products
-          </a>
-          <a className=" hover:text-dark-blue duration-300" href="/about-us">
+          </Link>
+          <Link className=" hover:text-dark-blue duration-300" to="/about-us">
             About us
-          </a>
-          <a className=" hover:text-dark-blue duration-300" href="contact">
+          </Link>
+          <Link className=" hover:text-dark-blue duration-300" to="/contact">
             Contact
-          </a>
+          </Link>
         </div>
         <div
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -50,18 +51,18 @@ const Header = () => {
       <div
         className={` absolute left-0 right-0 ${isMenuOpen ? " opacity-100 top-[86px]" : " opacity-0 -top-[200px]"} duration-500 z-40 flex flex-col justify-center items-end sm:hidden gap-6 text-stone-600 font-dm-sans text-xl bg-[#e9e9e9] pt-2 pb-5 px-12`}
       >
-        <a className=" hover:text-stone-400 duration-300" href="/">
+        <Link className=" hover:text-stone-400 duration-300" to="/">
           Home
-        </a>
-        <a className=" hover:text-stone-400 duration-300" href="/products">
+        </Link>
+        <Link className=" hover:text-stone-400 duration-300" to="/products">
           Products
-        </a>
-        <a className=" hover:text-stone-400 duration-300" href="/about-us">
+        </Link>
+        <Link className=" hover:text-stone-400 duration-300" to="/about-us">
           About us
-        </a>
-        <a className=" hover:text-stone-400 duration-300" href="contact">
+        </Link>
+        <Link className=" hover:text-stone-400 duration-300" to="contact">
           Contact
-        </a>
+        </Link>
       </div>
     </>
   );
