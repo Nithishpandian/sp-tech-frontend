@@ -24,7 +24,7 @@ const Footer = () => {
             1st Floor, S.F. No. 461/2 CRPF Road, Thoppampatti post, Coimbatore,
             Tamil Nadu, 641017
           </p>
-          <div className=" flex items-center gap-2 text-stone-300 mt-3">
+          {/* <div className=" flex items-center gap-2 text-stone-300 mt-3">
             <div className=" border border-stone-200 p-1 rounded-full hover:opacity-70 duration-300 cursor-pointer">
               <CiInstagram />
             </div>
@@ -34,7 +34,7 @@ const Footer = () => {
             <div className=" border border-stone-200 p-1 rounded-full hover:opacity-70 duration-300 cursor-pointer">
               <LuLinkedin />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className=" flex flex-col gap-3">
           <div className=" flex flex-col gap-3">

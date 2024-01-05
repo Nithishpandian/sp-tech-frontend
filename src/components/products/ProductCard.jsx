@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { MdDelete } from "react-icons/md";
+import { MdEditSquare } from "react-icons/md";
 import { adminToken } from "../../utils/api";
 import axios from "axios";
+import Popup from "../../layout/Popup";
 
 const ProductCard = ({ id, image, number, name, description }) => {
   const [token, setToken] = useState(adminToken);
+  const [openPopup, setOpenPopup] = useState(false);
+
+  const handleEditProduct = () => {
+    setOpenPopup(true);
+  }
 
   const handleDeleteProduct = () => {
     axios
@@ -37,12 +44,13 @@ const ProductCard = ({ id, image, number, name, description }) => {
           </p>
         </div>
         <div
-          onClick={handleDeleteProduct}
           className={`${
             token === "" || token === null ? "hidden" : "flex"
-          } absolute right-10 top-3 w-fit h-fit cursor-pointer`}
+          } absolute right-10 top-3 w-fit h-fit cursor-pointer items-center justify-center gap-4`}
         >
-          <MdDelete className=" text-3xl text-stone-500" />
+          <MdEditSquare onClick={handleEditProduct} className=" text-3xl text-stone-500 hover:text-stone-400 duration-300" />
+          <MdDelete onClick={handleDeleteProduct} className=" text-3xl text-stone-500 hover:text-stone-400 duration-300" />
+          <Popup openPopup={openPopup} setOpenPopup={setOpenPopup} type={"edit"} id={id} />
         </div>
       </div>
     </div>

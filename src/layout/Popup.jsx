@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import { api } from "../utils/api";
 import axios from "axios";
 
-export default function Popup({ openPopup, setOpenPopup }) {
+export default function Popup({ id, openPopup, setOpenPopup, type }) {
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [image, setImage] = useState("");
+
+  useEffect(() => {
+    if (type === "edit") {
+      axios
+        .get(`${import.meta.env.VITE_API_URL}/product/${id}`)
+        .then((res) => {
+          setProductName(res.data.productName);
+          setProductDescription(res.data.productDescription);
+          setImage(res.data.productImage.url);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, []);
+
   const handleImage = (e) => {
     const file = e.target.files[0];
     convertToBase64(file);
@@ -32,27 +48,44 @@ export default function Popup({ openPopup, setOpenPopup }) {
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(productName, productDescription, image);
-    await axios
-      .post(`${import.meta.env.VITE_API_URL}/product`, {
-        productName,
-        productDescription,
-        productImage: image,
-      })
-      .then((res) => {
-        console.log(res);
-        console.log(productName, productDescription, image);
-        handleClose();
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    if (type === "add") {
+      await axios
+        .post(`${import.meta.env.VITE_API_URL}/product`, {
+          productName,
+          productDescription,
+          productImage: image,
+        })
+        .then((res) => {
+          console.log(res);
+          console.log(productName, productDescription, image);
+          handleClose();
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    } else if (type === "edit") {
+      await axios
+        .post(`${import.meta.env.VITE_API_URL}/product/updateproduct/${id}`, {
+          productName,
+          productDescription,
+          productImage: image,
+        })
+        .then((res) => {
+          console.log(res);
+          console.log(productName, productDescription, image);
+          handleClose();
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
   };
 
   return (
     <React.Fragment>
       <Dialog open={openPopup} onClose={handleClose}>
-        <div className=" flex flex-col gap-4 bg-white py-6 px-5 rounded w-[450px]">
-          <h1 className=" text-2xl font-noto-sans text-gray font-semibold">
+        <div className=" flex flex-col gap-4 bg-white py-6 md:py-10 px-5 md:px-10 rounded w-[450px] md:w-[500px]">
+          <h1 className=" text-2xl md:text-3xl font-noto-sans text-gray font-semibold">
             Add a Product
           </h1>
           <form

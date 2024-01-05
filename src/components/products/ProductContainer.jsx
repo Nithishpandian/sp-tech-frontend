@@ -67,7 +67,7 @@ const ProductContainer = () => {
         >
           Add Product
         </button>
-        <Popup openPopup={openPopup} setOpenPopup={setOpenPopup} />
+        <Popup openPopup={openPopup} setOpenPopup={setOpenPopup} type={"add"} />
       </div>
     </div>
   );
