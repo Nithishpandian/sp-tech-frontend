@@ -4,24 +4,21 @@ import { MdEditSquare } from "react-icons/md";
 import { adminToken } from "../../utils/api";
 import axios from "axios";
 import Popup from "../../layout/Popup";
+import { useDispatch } from "react-redux";
+import { deleteProduct } from "../../redux/features/productService";
 
 const ProductCard = ({ id, image, number, name, description }) => {
+  const dispatch = useDispatch();
+
   const [token, setToken] = useState(adminToken);
   const [openPopup, setOpenPopup] = useState(false);
 
   const handleEditProduct = () => {
     setOpenPopup(true);
-  }
+  };
 
   const handleDeleteProduct = () => {
-    axios
-      .post(`${import.meta.env.VITE_API_URL}/product/deleteproduct`, { id })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    dispatch(deleteProduct(id));
   };
 
   return (
@@ -48,9 +45,20 @@ const ProductCard = ({ id, image, number, name, description }) => {
             token === "" || token === null ? "hidden" : "flex"
           } absolute right-10 top-3 w-fit h-fit cursor-pointer items-center justify-center gap-4`}
         >
-          <MdEditSquare onClick={handleEditProduct} className=" text-3xl text-stone-500 hover:text-stone-400 duration-300" />
-          <MdDelete onClick={handleDeleteProduct} className=" text-3xl text-stone-500 hover:text-stone-400 duration-300" />
-          <Popup openPopup={openPopup} setOpenPopup={setOpenPopup} type={"edit"} id={id} />
+          <MdEditSquare
+            onClick={handleEditProduct}
+            className=" text-3xl text-stone-500 hover:text-stone-400 duration-300"
+          />
+          <MdDelete
+            onClick={handleDeleteProduct}
+            className=" text-3xl text-stone-500 hover:text-stone-400 duration-300"
+          />
+          <Popup
+            openPopup={openPopup}
+            setOpenPopup={setOpenPopup}
+            type={"edit"}
+            id={id}
+          />
         </div>
       </div>
     </div>

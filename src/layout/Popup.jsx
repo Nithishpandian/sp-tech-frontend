@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Dialog from "@mui/material/Dialog";
-import { api } from "../utils/api";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addProduct, editProduct } from "../redux/features/productService";
 
 export default function Popup({ id, openPopup, setOpenPopup, type }) {
+  const dispatch = useDispatch();
+
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [image, setImage] = useState("");
@@ -21,11 +24,12 @@ export default function Popup({ id, openPopup, setOpenPopup, type }) {
           console.log(err);
         });
     }
-  }, []);
+  }, [openPopup === true]);
 
   const handleImage = (e) => {
     const file = e.target.files[0];
     convertToBase64(file);
+    console.log(file);
   };
   const convertToBase64 = (file) => {
     const reader = new FileReader();
@@ -49,35 +53,28 @@ export default function Popup({ id, openPopup, setOpenPopup, type }) {
     e.preventDefault();
     console.log(productName, productDescription, image);
     if (type === "add") {
-      await axios
-        .post(`${import.meta.env.VITE_API_URL}/product`, {
-          productName,
-          productDescription,
-          productImage: image,
-        })
-        .then((res) => {
-          console.log(res);
-          console.log(productName, productDescription, image);
-          handleClose();
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+      const formData = {
+        productName,
+        productDescription,
+        productImage: image,
+      };
+      dispatch(addProduct(formData));
+      if (addProduct.fulfilled) {
+        handleClose();
+      }
     } else if (type === "edit") {
-      await axios
-        .post(`${import.meta.env.VITE_API_URL}/product/updateproduct/${id}`, {
+      const data = {
+        id: id,
+        formData: {
           productName,
           productDescription,
           productImage: image,
-        })
-        .then((res) => {
-          console.log(res);
-          console.log(productName, productDescription, image);
-          handleClose();
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+        },
+      };
+      dispatch(editProduct(data));
+      if (editProduct.fulfilled) {
+        handleClose();
+      }
     }
   };
 

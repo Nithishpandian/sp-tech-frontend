@@ -6,20 +6,13 @@ import {
   animationVariantProducts,
 } from "./animation/HomeAnimation";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const FeaturedProducts = () => {
+  const data = useSelector((state) => state.product.products);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/product/getproducts`)
-      .then((res) => {
-        setProducts(res.data);
-        console.log(res.data);
-        console.log(products);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    setProducts(data)
   }, []);
 
   return (

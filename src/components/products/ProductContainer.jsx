@@ -5,32 +5,29 @@ import { productAnimationVariant } from "./animation/ProductAnimation";
 import Popup from "../../layout/Popup";
 import { adminToken } from "../../utils/api";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../redux/features/productService";
 
 const ProductContainer = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+
+  const [token, setToken] = useState(adminToken);
+  const [openPopup, setOpenPopup] = useState(false);
+  
+  const data = useSelector((state) => state.product.products);
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [openPopup]);
+
   const handleAddProduct = () => {
     setOpenPopup(true);
   };
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/product/getproducts`)
-      .then((res) => {
-        setProducts(res.data);
-        console.log(res.data);
-        console.log(products);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-  const [token, setToken] = useState(adminToken);
-
-  const [openPopup, setOpenPopup] = useState(false);
 
   return (
     <div className=" flex flex-col justify-center items-center gap-20 px-6 sm:px-36 md:px-7 lg:px-16 xl:px-36 2xl:px-40 3xl:px-44 py-16">
-      {products.length > 0 ? (
-        products.map((product, index) => {
+      {data.length > 0 ? (
+        data.map((product, index) => {
           return (
             <motion.div
               key={index}
