@@ -3,6 +3,7 @@ import Dialog from "@mui/material/Dialog";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addProduct, editProduct } from "../redux/features/productService";
+import { api } from "../utils/api";
 
 export default function Popup({ id, openPopup, setOpenPopup, type }) {
   const dispatch = useDispatch();
@@ -12,18 +13,25 @@ export default function Popup({ id, openPopup, setOpenPopup, type }) {
   const [image, setImage] = useState("");
 
   useEffect(() => {
-    if (type === "edit") {
-      axios
-        .get(`${import.meta.env.VITE_API_URL}/product/${id}`)
-        .then((res) => {
-          setProductName(res.data.productName);
-          setProductDescription(res.data.productDescription);
-          setImage(res.data.productImage.url);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
+    (async () => {
+      if (type === "edit") {
+        try {
+          const response = await api({
+            method: "get",
+            url: `/product/${id}`,
+          });
+          if (response.status === 200) {
+            setProductName(response.data.productName);
+            setProductDescription(response.data.productDescription);
+            setImage(response.data.productImage.url);
+          } else {
+            console.log(response);
+          }
+        } catch (error) {
+          console.error("Error fetching product:", error);
+        }
+      }
+    })();
   }, [openPopup === true]);
 
   const handleImage = (e) => {
