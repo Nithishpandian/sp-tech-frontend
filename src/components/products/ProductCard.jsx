@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { MdEditSquare } from "react-icons/md";
-import { adminToken } from "../../utils/api";
 import axios from "axios";
 import Popup from "../../layout/Popup";
 import { useDispatch } from "react-redux";
@@ -10,8 +9,12 @@ import { deleteProduct } from "../../redux/features/productService";
 const ProductCard = ({ id, image, number, name, description }) => {
   const dispatch = useDispatch();
 
-  const [token, setToken] = useState(adminToken);
+  const [token, setToken] = useState("");
   const [openPopup, setOpenPopup] = useState(false);
+
+  useEffect(()=>{
+    setToken(sessionStorage.getItem("adminToken"))
+  },[])
 
   const handleEditProduct = () => {
     setOpenPopup(true);

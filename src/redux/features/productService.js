@@ -18,6 +18,10 @@ export const addProduct = createAsyncThunk("product/add", async (product) => {
             method: "post",
             url: "/product",
             data: product,
+            headers: { 
+                Authorization: "Bearer " + sessionStorage.getItem("adminToken") ,
+                "Content-Type": "application/json",
+              },
         });
         return response.data;
     } catch (error) {
@@ -32,6 +36,10 @@ export const editProduct = createAsyncThunk("product/edit", async (data) => {
             method: "post",
             url: `/product/updateproduct/${data.id}`,
             data: data.formData,
+            headers: { 
+                Authorization: "Bearer " + sessionStorage.getItem("adminToken") ,
+                "Content-Type": "application/json",
+              },
         });
         return response.data;
     } catch (error) {
@@ -46,6 +54,10 @@ export const deleteProduct = createAsyncThunk("product/delete", async (id) => {
             method: "post",
             url: "/product/deleteproduct",
             data: { id },
+            headers: { 
+                Authorization: "Bearer " + sessionStorage.getItem("adminToken") ,
+                "Content-Type": "application/json",
+              },
         });
         return response.data;
     } catch (error) {

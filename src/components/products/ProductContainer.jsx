@@ -3,15 +3,16 @@ import ProductCard from "./ProductCard";
 import { motion } from "framer-motion";
 import { productAnimationVariant } from "./animation/ProductAnimation";
 import Popup from "../../layout/Popup";
-import { adminToken } from "../../utils/api";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/features/productService";
 
 const ProductContainer = () => {
   const dispatch = useDispatch();
 
-  const [token, setToken] = useState(adminToken);
+  const [token, setToken] = useState("");
+  useEffect(()=>{
+    setToken(sessionStorage.getItem("adminToken"))
+  },[])
   const [openPopup, setOpenPopup] = useState(false);
   
   const data = useSelector((state) => state.product.products);

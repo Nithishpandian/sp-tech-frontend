@@ -19,6 +19,10 @@ export default function Popup({ id, openPopup, setOpenPopup, type }) {
           const response = await api({
             method: "get",
             url: `/product/${id}`,
+            headers: { 
+              Authorization: "Bearer " + sessionStorage.getItem("adminToken") ,
+              "Content-Type": "application/json",
+            },
           });
           if (response.status === 200) {
             setProductName(response.data.productName);

@@ -4,27 +4,62 @@ import axios from "axios";
 import logo from "../../assets/images/common/logo.png";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
+import TextField from "@mui/material/TextField";
 
 const LoginComponent = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     userName: "",
     password: "",
   });
   const { userName, password } = formData;
+
+  const [errorForm, setErrorForm] = useState({
+    userName: false,
+    password: false,
+  });
+
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    if (
+      userName !== import.meta.env.VITE_ADMIN_USERNAME &&
+      password !== import.meta.env.VITE_ADMIN_PASSWORD
+    ) {
+      setErrorForm({ userName: true, password: true });
+      return;
+    }
+    if (
+      userName === import.meta.env.VITE_ADMIN_USERNAME &&
+      password !== import.meta.env.VITE_ADMIN_PASSWORD
+    ) {
+      setErrorForm({ userName: false, password: true });
+      return;
+    }
+    if (
+      userName !== import.meta.env.VITE_ADMIN_USERNAME &&
+      password === import.meta.env.VITE_ADMIN_PASSWORD
+    ) {
+      setErrorForm({ userName: true, password: false });
+      return;
+    }
+    if (
+      userName === import.meta.env.VITE_ADMIN_USERNAME &&
+      password === import.meta.env.VITE_ADMIN_PASSWORD
+    ) {
+      setErrorForm({ userName: false, password: false });
+    }
+
     await axios
       .post(`${import.meta.env.VITE_API_URL}/admin/login`, formData)
       .then((res) => {
         console.log(res);
-        sessionStorage.setItem("adminToken", JSON.stringify(res.data.token))
-        navigate("/")
+        sessionStorage.setItem("adminToken", res.data.token.replace(/"([^"]+(?="))"/g, '$1'));
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
@@ -49,26 +84,38 @@ const LoginComponent = () => {
       </div>
       <form className=" flex flex-col gap-5 w-full xl:px-5" onSubmit={onSubmit}>
         <div className=" flex flex-col items-center justify-center gap-3 w-full text-stone-600 font-roboto">
-          <input
+          <TextField
+            label="Username"
+            variant="outlined"
             type="text"
-            placeholder="username"
-            className=" py-2 px-3 focus:outline-none rounded bg-stone-200 w-full"
+            name="userName"
             onChange={(e) => onChange(e)}
             value={userName}
-            name="userName"
+            error={errorForm.userName}
+            helperText={errorForm.userName ? "Username is wrong" : ""}
+            size="small"
+            fullWidth
             required
           />
-          <div className=" relative w-full">
-            <input
+          <div className=" relative w-full h-fit">
+            <TextField
+              label="Password"
+              variant="outlined"
               type={`${showPassword ? "text" : "password"}`}
-              placeholder="password"
-              className=" py-2 px-3 focus:outline-none rounded bg-stone-200 w-full"
+              name="password"
               onChange={(e) => onChange(e)}
               value={password}
-              name="password"
+              error={errorForm.password}
+              helperText={errorForm.password ? "Password is wrong" : ""}
+              size="small"
+              fullWidth
               required
             />
-            <div className=" absolute right-4 top-1/2 transform -translate-y-1/2">
+            <div
+              className={` absolute right-4 ${
+                errorForm.password ? " top-1/3" : "top-1/2"
+              } transform -translate-y-1/2`}
+            >
               {showPassword ? (
                 <IoEyeOutline
                   className=" cursor-pointer text-stone-500"
