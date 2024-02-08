@@ -38,11 +38,8 @@ const WhatWeOffer = () => {
             alt=""
           />
           <DecorationHome
-            title={"EXPERIENCE TEAMS"}
-            content={`We're on a mission to change the way the housing market works.
-            Rather than offering one service or another, we want to combine as
-            many and make our clients' lives easy and carefree. Our goal is to
-            match.`}
+            title={"PREMIUM QUALITY"}
+            content={`We pride ourselves on delivering premium-quality services that exceed industry standards. Our team is dedicated to providing top-notch solutions that not only meet but exceed our clients' expectations. From the materials we use to the expertise we bring, quality is at the forefront of everything we do.`}
           />
         </motion.div>
         <motion.div
@@ -59,11 +56,8 @@ const WhatWeOffer = () => {
             alt=""
           />
           <DecorationHome
-            title={"QUALITY TO DIE FOR"}
-            content={`We're on a mission to change the way the housing market works.
-          Rather than offering one service or another, we want to combine as
-          many and make our clients' lives easy and carefree. Our goal is to
-          match.`}
+            title={"THOROUGH TESTING"}
+            content={`Ensuring the reliability and functionality of our solutions is paramount. We conduct thorough testing throughout every stage of development to identify and address any potential issues before they arise. Our rigorous testing protocols guarantee that our products and services are robust, reliable, and ready to meet the demands of our clients.`}
           />
         </motion.div>
         <motion.div
@@ -80,11 +74,8 @@ const WhatWeOffer = () => {
             alt=""
           />
           <DecorationHome
-            title={"VISIONARY OF THE FUTURE"}
-            content={`We're on a mission to change the way the housing market works.
-            Rather than offering one service or another, we want to combine as
-            many and make our clients' lives easy and carefree. Our goal is to
-            match.`}
+            title={"COST-EFFICIENT SOLUTIONS"}
+            content={`While we prioritize quality, we also understand the importance of cost-effectiveness. Our solutions are designed to deliver maximum value without breaking the bank. By leveraging innovative technologies, streamlined processes, and strategic partnerships, we offer cost-efficient solutions that help our clients achieve their goals within their budget constraints.`}
           />
         </motion.div>
       </div>

@@ -11,7 +11,7 @@ import {
 const AboutUsInfo = () => {
   return (
     <div>
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center items-center lg:gap-1 pt-5 sm:pt-16 pb-12 sm:pb-20 px-5 sm:px-20 md:px-36 lg:px-12 xl:px-40 2xl:px-44 ">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center lg:gap-1 pt-5 sm:pt-16 pb-12 sm:pb-20 px-5 sm:px-20 md:px-36 lg:px-12 xl:px-40 2xl:px-44 ">
         <motion.div
           variants={aboutAnimationVariantLeft}
           initial="initial"
@@ -44,27 +44,10 @@ const AboutUsInfo = () => {
           </h1>
           <div className=" flex flex-col gap-3 text-stone-700 text-xs sm:text-sm 2xl:text-base font-light">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
-              nulla nihil. Vel ut rerum dignissimos, officia neque illum eaque
-              alias, et sit eveniet dolorum ipsum vero tempore porro non
-              repellendus. Architecto tenetur magni doloremque, animi voluptatem
-              earum iure iste! Illo vitae accusamus dignissimos laudantium,
-              eaque earum quisquam officiis saepe, rem deleniti maiores nulla
-              eos velit cumque dolor ratione neque ea? Optio, doloribus non
-              omnis soluta id aspernatur culpa numquam nobis beatae, unde
-              dignissimos rerum iusto nemo sint neque laudantium hic
-              reprehenderit. Quam at quasi voluptatibus nobis, quis minima fugit
-              tempore eveniet assumenda consequatur, quas molestiae facere harum
-              culpa expedita! Est.
+              SP Tech is a prominent manufacturer of wiring harness and cable assemblies cateering to various industrial segments such as Auomobile / EV, Home & Medical appliances, Industrial machinery, Aerospeace etc.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi
-              quod, nobis aspernatur quia nam id optio et harum quisquam?
-              Quaerat a vel dicta temporibus, error deserunt rerum. Illo amet
-              perferendis aliquid quas officiis iure! Iste voluptates nesciunt
-              magni suscipit ducimus nulla obcaecati aut cupiditate magnam
-              reprehenderit sequi accusantium totam, consectetur earum sint
-              aliquid ullam quidem voluptatem voluptatibus, ipsum animi!
+              We are an ISO 9001:2015 certified orgainsation with a skilled & experinced team with advanced manufacture technology.
             </p>
           </div>
           <div className=" h-full w-full flex justify-end items-end">
