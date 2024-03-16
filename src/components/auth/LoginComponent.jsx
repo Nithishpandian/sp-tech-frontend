@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../../assets/images/common/logo.png";
-import { IoEyeOutline } from "react-icons/io5";
-import { IoEyeOffOutline } from "react-icons/io5";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import TextField from "@mui/material/TextField";
 
 const LoginComponent = () => {
@@ -24,72 +23,61 @@ const LoginComponent = () => {
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (
-      userName !== import.meta.env.VITE_ADMIN_USERNAME &&
+      userName !== import.meta.env.VITE_ADMIN_USERNAME ||
       password !== import.meta.env.VITE_ADMIN_PASSWORD
     ) {
       setErrorForm({ userName: true, password: true });
       return;
-    }
-    if (
-      userName === import.meta.env.VITE_ADMIN_USERNAME &&
-      password !== import.meta.env.VITE_ADMIN_PASSWORD
-    ) {
-      setErrorForm({ userName: false, password: true });
-      return;
-    }
-    if (
-      userName !== import.meta.env.VITE_ADMIN_USERNAME &&
-      password === import.meta.env.VITE_ADMIN_PASSWORD
-    ) {
-      setErrorForm({ userName: true, password: false });
-      return;
-    }
-    if (
-      userName === import.meta.env.VITE_ADMIN_USERNAME &&
-      password === import.meta.env.VITE_ADMIN_PASSWORD
-    ) {
-      setErrorForm({ userName: false, password: false });
+    } else {
+      setErrorForm({
+        userName: false,
+        password: false,
+      });
     }
 
-    await axios
-      .post(`${import.meta.env.VITE_API_URL}/admin/login`, formData)
-      .then((res) => {
-        console.log(res);
-        sessionStorage.setItem("adminToken", res.data.token.replace(/"([^"]+(?="))"/g, '$1'));
-        navigate("/");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    try {
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/admin/login`,
+        formData
+      );
+      sessionStorage.setItem(
+        "adminToken",
+        res.data.token.replace(/"([^"]+(?="))"/g, "$1")
+      );
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
-    <div className=" flex flex-col justify-center items-center gap-4 -mt-20 w-80 sm:w-96 xl:w-[450px]">
+    <div className="flex flex-col justify-center items-center gap-4 -mt-20 w-80 sm:w-96 xl:w-[450px]">
       <img
-        className=" w-3/6 sm:w-2/6 md:w-2/5 lg:w-2/4 2xl:w-3/5 scale-125"
+        className="w-3/6 sm:w-2/6 md:w-2/5 lg:w-2/4 2xl:w-3/5 scale-125"
         src={logo}
         alt=""
       />
-      <div className=" flex flex-col items-center justify-center gap-1 mb-2">
-        <h1 className=" font-noto-sans text-gray text-4xl font-bold">
+      <div className="flex flex-col items-center justify-center gap-1 mb-2">
+        <h1 className="font-noto-sans text-gray text-4xl font-bold">
           Welcome back!
         </h1>
-        <p className=" text-stone-500 font-noto-sans text-center text-sm sm:text-base">
+        <p className="text-stone-500 font-noto-sans text-center text-sm sm:text-base">
           Unlock the Full Potential: Log in and Access All Website Functionality
           for a Seamless Experience.
         </p>
       </div>
-      <form className=" flex flex-col gap-5 w-full xl:px-5" onSubmit={onSubmit}>
-        <div className=" flex flex-col items-center justify-center gap-3 w-full text-stone-600 font-roboto">
+      <form className="flex flex-col gap-5 w-full xl:px-5" onSubmit={onSubmit}>
+        <div className="flex flex-col items-center justify-center gap-3 w-full text-stone-600 font-roboto">
           <TextField
             label="Username"
             variant="outlined"
             type="text"
             name="userName"
-            onChange={(e) => onChange(e)}
+            onChange={onChange}
             value={userName}
             error={errorForm.userName}
             helperText={errorForm.userName ? "Username is wrong" : ""}
@@ -97,13 +85,13 @@ const LoginComponent = () => {
             fullWidth
             required
           />
-          <div className=" relative w-full h-fit">
+          <div className="relative w-full h-fit">
             <TextField
               label="Password"
               variant="outlined"
               type={`${showPassword ? "text" : "password"}`}
               name="password"
-              onChange={(e) => onChange(e)}
+              onChange={onChange}
               value={password}
               error={errorForm.password}
               helperText={errorForm.password ? "Password is wrong" : ""}
@@ -112,19 +100,19 @@ const LoginComponent = () => {
               required
             />
             <div
-              className={` absolute right-4 ${
-                errorForm.password ? " top-1/3" : "top-1/2"
+              className={`absolute right-4 ${
+                errorForm.password ? "top-1/3" : "top-1/2"
               } transform -translate-y-1/2`}
             >
               {showPassword ? (
                 <IoEyeOutline
-                  className=" cursor-pointer text-stone-500"
+                  className="cursor-pointer text-stone-500"
                   size={20}
                   onClick={() => setShowPassword(!showPassword)}
                 />
               ) : (
                 <IoEyeOffOutline
-                  className=" cursor-pointer text-stone-500"
+                  className="cursor-pointer text-stone-500"
                   size={20}
                   onClick={() => setShowPassword(!showPassword)}
                 />
@@ -133,10 +121,10 @@ const LoginComponent = () => {
           </div>
         </div>
         <button
-          className=" duration-300 hover:bg-white hover:text-primary border hover:border-primary bg-primary rounded-md text-white py-[9px] font-semibold font-noto-sans w-full"
+          className="duration-300 hover:bg-white hover:text-primary border hover:border-primary bg-primary rounded-md text-white py-[9px] font-semibold font-noto-sans w-full"
           type="submit"
         >
-          {"Sign in"}
+          Sign in
         </button>
       </form>
     </div>
