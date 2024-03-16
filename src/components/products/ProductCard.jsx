@@ -39,6 +39,7 @@ const ProductCard = ({ id, image, number, name, description }) => {
             {number}
           </h1>
           <h1 className=" text-gray text-3xl font-hammersmith-one">{name}</h1>
+          {/* <p className=" text-primary font-noto-sans text-xs sm:text-sm md:text-xs lg:text-sm font-semibold mb-1 -mt-2">{application}</p> */}
           <p className=" text-[#353535] font-roboto text-sm sm:text-base md:text-sm lg:text-base">
             {description}
           </p>

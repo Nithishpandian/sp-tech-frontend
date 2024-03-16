@@ -44,10 +44,14 @@ const AboutUsInfo = () => {
           </h1>
           <div className=" flex flex-col gap-3 text-stone-700 text-xs sm:text-sm 2xl:text-base font-light">
             <p>
-              SP Tech is a prominent manufacturer of wiring harness and cable assemblies cateering to various industrial segments such as Auomobile / EV, Home & Medical appliances, Industrial machinery, Aerospeace etc.
+              SP Tech is a prominent manufacturer of wiring harness and cable
+              assemblies catering to various industrial segments such as
+              Automobile / EV, Home & Medical appliances, Industrial machinery,
+              Aerospace etc.
             </p>
             <p>
-              We are an ISO 9001:2015 certified orgainsation with a skilled & experinced team with advanced manufacture technology.
+              We are an ISO 9001:2015 certified organisation with a skilled &
+              experienced team with advanced manufacture technology.
             </p>
           </div>
           <div className=" h-full w-full flex justify-end items-end">
@@ -65,20 +69,12 @@ const AboutUsInfo = () => {
           }}
           className=" flex flex-col gap-4 lg:gap-9 xl:gap-12"
         >
-          <img
-            className=" sm:hidden flex w-10"
-            src={decorationImg}
-            alt=""
-          />
+          <img className=" sm:hidden flex w-10" src={decorationImg} alt="" />
           <h1 className=" text-dark-blue text-3xl sm:text-4xl xl:text-5xl font-krona-one font-bold">
             OUR MISSION
           </h1>
           <DecorationAboutUs
-            content={`We're on a mission to change the way the housing market works. Rather
-            than offering one service or another, we want to combine as many and
-            make our clients' lives easy and carefree. Our goal is to match our
-            clients with the perfect properties that fit their tastes, needs, and
-            budgets.`}
+            content={`We are committed to delivering top-tier wiring harness and cable assemblies across industries. Through innovation, quality, and reliability, we exceed expectations, leveraging advanced technologies and expertise to empower global efficiency and innovation.`}
           />
         </motion.div>
         <motion.div
@@ -90,20 +86,12 @@ const AboutUsInfo = () => {
           }}
           className=" flex flex-col gap-4 lg:gap-9 xl:gap-12"
         >
-          <img
-            className=" sm:hidden flex w-10"
-            src={decorationImg}
-            alt=""
-          />
+          <img className=" sm:hidden flex w-10" src={decorationImg} alt="" />
           <h1 className=" text-dark-blue text-3xl sm:text-4xl xl:text-5xl font-krona-one font-bold">
             OUR VISION
           </h1>
           <DecorationAboutUs
-            content={`We're on a mission to change the way the housing market works. Rather
-            than offering one service or another, we want to combine as many and
-            make our clients' lives easy and carefree. Our goal is to match our
-            clients with the perfect properties that fit their tastes, needs, and
-            budgets.`}
+            content={`We are dedicated to providing superior wiring harness and cable assemblies to diverse industrial sectors. With a focus on innovation, quality, and reliability, we leverage advanced manufacturing technologies and a skilled team to exceed customer expectations.`}
           />
         </motion.div>
       </div>

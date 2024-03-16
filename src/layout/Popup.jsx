@@ -16,20 +16,22 @@ export default function Popup({ id, openPopup, setOpenPopup, type }) {
     (async () => {
       if (type === "edit") {
         try {
-          const response = await api({
-            method: "get",
-            url: `/product/${id}`,
-            headers: { 
-              Authorization: "Bearer " + sessionStorage.getItem("adminToken") ,
-              "Content-Type": "application/json",
-            },
-          });
-          if (response.status === 200) {
-            setProductName(response.data.productName);
-            setProductDescription(response.data.productDescription);
-            setImage(response.data.productImage.url);
-          } else {
-            console.log(response);
+          if (sessionStorage.getItem("adminToken")) {
+            const response = await api({
+              method: "get",
+              url: `/product/${id}`,
+              headers: {
+                Authorization: "Bearer " + sessionStorage.getItem("adminToken"),
+                "Content-Type": "application/json",
+              },
+            });
+            if (response.status === 200) {
+              setProductName(response.data.productName);
+              setProductDescription(response.data.productDescription);
+              setImage(response.data.productImage.url);
+            } else {
+              console.log(response);
+            }
           }
         } catch (error) {
           console.error("Error fetching product:", error);
